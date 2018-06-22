@@ -1,0 +1,2 @@
+how meta tag works
+how the js file works
