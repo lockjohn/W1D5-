@@ -1,4 +1,45 @@
 require 'byebug'
+class KnightPathFinder
+
+  def initialize(start_pos)
+    @start_pos = start_pos
+    @visited_positions = [start_pos]
+    build_move_tree
+  end  
+  
+  def build_move_tree
+    # @move_tree = 
+  end
+  
+  def self.valid_moves(pos)
+    result = []
+    base_case= [[2,3],[2,5],[3,2],[3,6],[5,2],[5,6],[6,3],[6,5]]
+    x_shift = pos[0]-4
+    y_shift = pos[1]-4
+    result = base_case.map do |el|
+      el[0]+x_shift
+      el[1]+y_shift
+    end
+    result.select do |el|
+      el[0].between?(0..7) && el[1].between?(0..7) 
+    end
+            #current position is most recent [] in visited_positions
+    # current = @visited_positions.last
+    #is position on the board
+    #is it the right movement
+    # if pos.zero? 
+  end
+  
+  def find_path
+    
+  end
+  
+  def new_move_positions(pos)
+    
+  end
+
+end
+
 
 class PolyTreeNode
   
